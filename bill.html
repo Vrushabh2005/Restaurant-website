@@ -1,0 +1,82 @@
+<html>
+<head>
+  <title>Bill</title>
+  <style>
+    /* Add your CSS styles here */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .print-button {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bill</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody id="itemsList"></tbody>
+  </table>
+  <h3>Total Amount: <span id="totalAmount"></span></h3>
+ 
+  <button class="print-button" onclick="window.print()">Print</button>
+ 
+  <script>
+    window.onload = function() {
+      var cart = JSON.parse(sessionStorage.getItem("cart"));
+      var itemsList = document.getElementById("itemsList");
+      var totalAmount = 0;
+ 
+      for (var item in cart) {
+        if (cart.hasOwnProperty(item)) {
+          var quantity = cart[item];
+          var itemPrice = getItemPrice(item);
+          var totalPrice = quantity * itemPrice;
+          totalAmount += totalPrice;
+ 
+          var row = document.createElement("tr");
+          row.innerHTML = "<td>" + item + "</td>" +
+                          "<td>" + quantity + "</td>" +
+                          "<td>" + itemPrice.toFixed(2) + "</td>" +
+                          "<td>" + totalPrice.toFixed(2) + "</td>";
+          itemsList.appendChild(row);
+        }
+      }
+ 
+      document.getElementById("totalAmount").textContent = totalAmount.toFixed(2) + "/-";
+    };
+ 
+    function getItemPrice(itemName) {
+      var prices = {
+        "egg": 15, "pasta_origano": 35, "boiled_eggs": 12, "poha": 25, "samosa": 15, "pav_bhaji": 50,
+        "chicken_fried_momos": 69, "veg_hakka_noodles": 45, "chicken_roasted_momos": 35, "chicken_steam_momos": 50,
+        "veg_steam_momos": 65, "veg_fried_momos": 65, "aloo_masala": 70, "ladyfinger": 75, "shahi_paneer": 100,
+        "palak_paneer": 100, "paneer_masala": 105, "paneer_butter_masala": 150, "mixed_veg": 95, "chicken_curry": 100,
+        "chicken_handi_curry": 200, "chicken_butter_masala": 200, "chicken_tikka_masala": 200, "mutton_curry": 100,
+        "mutton_handi_curry": 250, "mutton_butter_masala": 250, "mutton_tikka_masala": 250, "plain_steamed_rice": 30,
+        "jerra_rice": 35, "veg_biryani": { "half": 60, "full": 120 }, "egg_biryani": { "half": 60, "full": 120 },
+        "chicken_biryani": { "half": 70, "full": 140 }, "mutton_biryani": { "half": 75, "full": 150 }, "water": 10,
+        "thumbs_up": 25, "sprite": 30, "coffee": 20, "tea": 10
+      };
+ 
+      return prices[itemName] || 0;
+    }
+  </script>
+</body>
+</html>

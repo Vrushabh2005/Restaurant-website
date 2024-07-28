@@ -1,0 +1,128 @@
+<html>
+<head>
+  <title>Uttar-Dakshin Restaurant Menu</title>
+  <style>
+    /* Add your CSS styles here */
+  </style>
+</head>
+<body>
+  <h3>Menu card:</h3>
+ 
+  <!-- Create a form to add items to the cart -->
+  <form id="menuForm">
+    <h3>Breakfast:</h3>
+    <input type="checkbox" name="item" value="egg"> Egg - Rs. 15
+    Quantity: <input type="number" name="egg_quantity" id="egg_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="pasta_origano"> Pasta Origano - Rs. 35
+    Quantity: <input type="number" name="pasta_quantity" id="pasta_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="boiled_eggs"> Boiled Eggs - Rs. 12
+    Quantity: <input type="number" name="boiled_eggs_quantity" id="boiled_eggs_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="poha"> Poha - Rs. 25
+    Quantity: <input type="number" name="poha_quantity" id="poha_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="samosa"> Samosa - Rs. 15
+    Quantity: <input type="number" name="samosa_quantity" id="samosa_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="pav_bhaji"> Pav Bhaji - Rs. 50
+    Quantity: <input type="number" name="pav_bhaji_quantity" id="pav_bhaji_quantity" min="0"><br>
+ 
+    <h3>Chinese:</h3>
+    <input type="checkbox" name="item" value="chicken_fried_momos"> Chicken Fried Momos - Rs. 69
+    Quantity: <input type="number" name="chicken_fried_momos_quantity" id="chicken_fried_momos_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="veg_hakka_noodles"> Veg Hakka Noodles - Rs. 45
+    Quantity: <input type="number" name="veg_hakka_noodles_quantity" id="veg_hakka_noodles_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="chicken_roasted_momos"> Chicken Roasted Momos - Rs. 35
+    Quantity: <input type="number" name="chicken_roasted_momos_quantity" id="chicken_roasted_momos_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="chicken_steam_momos"> Chicken Steam Momos - Rs. 50
+    Quantity: <input type="number" name="chicken_steam_momos_quantity" id="chicken_steam_momos_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="veg_steam_momos"> Veg Steam Momos - Rs. 65
+    Quantity: <input type="number" name="veg_steam_momos_quantity" id="veg_steam_momos_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="veg_fried_momos"> Veg Fried Momos - Rs. 65
+    Quantity: <input type="number" name="veg_fried_momos_quantity" id="veg_fried_momos_quantity" min="0"><br>
+ 
+    <h3>Veg Mealcourse:</h3>
+    <input type="checkbox" name="item" value="aloo_masala"> Aloo Masala - Rs. 70
+    Quantity: <input type="number" name="aloo_masala_quantity" id="aloo_masala_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="ladyfinger"> Ladyfinger - Rs. 75
+    Quantity: <input type="number" name="ladyfinger_quantity" id="ladyfinger_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="shahi_paneer"> Shahi Paneer - Rs. 100
+    Quantity: <input type="number" name="shahi_paneer_quantity" id="shahi_paneer_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="palak_paneer"> Palak Paneer - Rs. 100
+    Quantity: <input type="number" name="palak_paneer_quantity" id="palak_paneer_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="paneer_masala"> Paneer Masala - Rs. 105
+    Quantity: <input type="number" name="paneer_masala_quantity" id="paneer_masala_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="paneer_butter_masala"> Paneer Butter Masala - Rs. 150
+    Quantity: <input type="number" name="paneer_butter_masala_quantity" id="paneer_butter_masala_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="mixed_veg"> Mixed Veg - Rs. 95
+    Quantity: <input type="number" name="mixed_veg_quantity" id="mixed_veg_quantity" min="0"><br>
+ 
+    <h3>Non-Veg Mealcourse:</h3>
+    <input type="checkbox" name="item" value="chicken_curry"> Chicken Curry - Rs. 100
+    Quantity: <input type="number" name="chicken_curry_quantity" id="chicken_curry_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="chicken_handi_curry"> Chicken Handi Curry - Rs. 200
+    Quantity: <input type="number" name="chicken_handi_curry_quantity" id="chicken_handi_curry_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="chicken_butter_masala"> Chicken Butter Masala - Rs. 200
+    Quantity: <input type="number" name="chicken_butter_masala_quantity" id="chicken_butter_masala_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="chicken_tikka_masala"> Chicken Tikka Masala - Rs. 200
+    Quantity: <input type="number" name="chicken_tikka_masala_quantity" id="chicken_tikka_masala_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="mutton_curry"> Mutton Curry - Rs. 100
+    Quantity: <input type="number" name="mutton_curry_quantity" id="mutton_curry_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="mutton_handi_curry"> Mutton Handi Curry - Rs. 250
+    Quantity: <input type="number" name="mutton_handi_curry_quantity" id="mutton_handi_curry_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="mutton_butter_masala"> Mutton Butter Masala - Rs. 250
+    Quantity: <input type="number" name="mutton_butter_masala_quantity" id="mutton_butter_masala_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="mutton_tikka_masala"> Mutton Tikka Masala - Rs. 250
+    Quantity: <input type="number" name="mutton_tikka_masala_quantity" id="mutton_tikka_masala_quantity" min="0"><br>
+ 
+    <h3>Rice/Biryani:</h3>
+    <input type="checkbox" name="item" value="plain_steamed_rice"> Plain Steamed Rice - Rs. 30
+    Quantity: <input type="number" name="plain_steamed_rice_quantity" id="plain_steamed_rice_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="jerra_rice"> Jerra Rice - Rs. 35
+    Quantity: <input type="number" name="jerra_rice_quantity" id="jerra_rice_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="veg_biryani"> Veg Biryani - Rs. 60 (Half) / Rs. 120 (Full)
+    Quantity: <input type="number" name="veg_biryani_quantity" id="veg_biryani_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="egg_biryani"> Egg Biryani - Rs. 60 (Half) / Rs. 120 (Full)
+    Quantity: <input type="number" name="egg_biryani_quantity" id="egg_biryani_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="chicken_biryani"> Chicken Biryani - Rs. 70 (Half) / Rs. 140 (Full)
+    Quantity: <input type="number" name="chicken_biryani_quantity" id="chicken_biryani_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="mutton_biryani"> Mutton Biryani - Rs. 75 (Half) / Rs. 150 (Full)
+    Quantity: <input type="number" name="mutton_biryani_quantity" id="mutton_biryani_quantity" min="0"><br>
+ 
+    <h3>Water/Beverages:</h3>
+    <input type="checkbox" name="item" value="water"> Water - Rs. 10
+    Quantity: <input type="number" name="water_quantity" id="water_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="thumbs_up"> Thumbs Up - Rs. 25
+    Quantity: <input type="number" name="thumbs_up_quantity" id="thumbs_up_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="sprite"> Sprite - Rs. 30
+    Quantity: <input type="number" name="sprite_quantity" id="sprite_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="coffee"> Coffee - Rs. 20
+    Quantity: <input type="number" name="coffee_quantity" id="coffee_quantity" min="0"><br>
+    <input type="checkbox" name="item" value="tea"> Tea - Rs. 10
+    Quantity: <input type="number" name="tea_quantity" id="tea_quantity" min="0"><br>
+  </form>
+ 
+ <button type="button" onclick="addToCart()">Add to Cart</button>
+ 
+  <script>
+    // Function to add items to the cart
+    function addToCart() {
+      var form = document.getElementById("menuForm");
+      var items = form.querySelectorAll('input[name="item"]:checked');
+      var cart = {};
+ 
+      items.forEach(function(item) {
+        var itemName = item.value;
+        var quantity = parseInt(document.getElementById(itemName + "_quantity").value);
+        if (quantity > 0) {
+          cart[itemName] = quantity;
+        }
+      });
+ 
+      if (Object.keys(cart).length > 0) {
+        sessionStorage.setItem("cart", JSON.stringify(cart));
+        window.location.href = "bill.html";
+      } else {
+        alert("Please select at least one item.");
+      }
+    }
+  </script>
+</body>
+</html>

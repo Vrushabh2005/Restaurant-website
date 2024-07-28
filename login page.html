@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      text-align: center;
+      background-image: url('https://wallpapercave.com/wp/wp9980760.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: rgba(255, 255, 255, 0.5);
+      color: black; 
+    }
+    
+    input {
+      color: black; 
+    }
+  </style>
+</head>
+<body style="text-align:center ">
+
+<h1>ZOMATO</h1><br>
+<br>
+<h1>Enter your Name :<input id="Name"></h1>
+<br><br>
+<h1>Enter Mobile No. :<input id="num"><br><br></h1>
+<h1>Enter Address:<input id="add"><br><br>
+Enter Email Address:<input id="email"><br><br>
+<button onclick="login()">Login</button><br><br>
+
+<script>
+function login() {
+  var name = document.getElementById("Name").value;
+  var num = document.getElementById("num").value;
+  var add = document.getElementById("add").value;
+  var email = document.getElementById("email").value;
+   
+  window.location.href = "restaurant list.html"; 
+}
+</script>
+</body>
+</html>
